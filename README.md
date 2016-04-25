@@ -1,7 +1,7 @@
 # The Surveather Project #
 
 The Surveather Project started as part of the NASA Spaceapp Challange 2016 in Würzburg
-and is initialized by Sabrina Höhn, Robert Leppich and Vincent Truchseß.
+and was initialized by Sabrina Höhn, Robert Leppich and Vincent Truchseß.
 
 
 ## The Surveather Application ##
