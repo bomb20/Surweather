@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //TODO: Locale shut be international
         this.geocoder = new Geocoder(this, Locale.GERMANY);
         this.countdown = (TextView) findViewById(R.id.textView_countdown);
         this.sdf = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss");
@@ -70,14 +70,14 @@ public class MainActivity extends AppCompatActivity {
         this.buttonGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(TAG, "Pressed Go");
+                //TODO: provide suggestion list
                 if (editText.getText() == null || editText.equals("")) return;
                 findCity(editText.getText().toString());
             }
         });
         this.decimalFormat = new DecimalFormat("##.##");
 
-
+        //TODO: On suggestion: provide the "Doomsday countdown" only in the adults version, not on the child version
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         CountDownTimer cdt = new CountDownTimer(Long.parseLong(getString(R.string.remaining)), 1) {
 
@@ -99,8 +99,6 @@ public class MainActivity extends AppCompatActivity {
     //TODO: save a given location request
     public void findCity(String address) {
         if(address == null) return;
-//        getPreferences(MODE_PRIVATE).edit().putString("address", address).commit();
-//        Geocoder geocoder = new Geocoder(this, Locale.GERMANY);
 
         try {
             final List<Address> result = geocoder.getFromLocationName(address, 10);
