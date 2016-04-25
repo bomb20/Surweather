@@ -1,0 +1,139 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserCommit">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#ffffff">
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar_air"
+            android:max="4"
+            android:progress="0"
+            android:layout_above="@+id/seekBar_noise"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="111dp"
+            android:background="#d76238" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar_noise"
+            android:max="4"
+            android:progress="0"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:background="#d76238" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar_allergie"
+            android:max="4"
+            android:progress="0"
+            android:background="#d76238"
+            android:layout_below="@+id/imageView7"
+             />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:layout_above="@+id/seekBar_air"
+            android:layout_alignParentStart="true"
+            android:background="@mipmap/goodair" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:layout_above="@+id/seekBar_air"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/badair" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView3"
+            android:background="@mipmap/uglyair"
+            android:layout_above="@+id/seekBar_air"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView4"
+            android:layout_above="@+id/seekBar_noise"
+            android:layout_alignParentStart="true"
+            android:background="@mipmap/goodear" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView5"
+            android:layout_above="@+id/seekBar_noise"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/badear" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView6"
+            android:layout_above="@+id/seekBar_noise"
+            android:layout_alignParentEnd="true"
+            android:background="@mipmap/uglyear" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView7"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/seekBar_noise"
+            android:layout_marginTop="55dp"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/goodeye"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView8"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/seekBar_noise"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/badeye"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView9"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/seekBar_noise"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/uglyeye"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:id="@+id/button_commit"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="Commit"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickCommit"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

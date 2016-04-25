@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Surveather</string>
+    <string name="apikey">761a53d8ce05404ce00dd5bcc744f5b6</string>
+    <string name="url">http://api.openweathermap.org/data/2.5/</string>
+    <string name="city_enter_city">Please enter your city...</string>
+    <string name="button_go">Go!</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="button_scan">Scan</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="temperatur">Temperature:</string>
+    <string name="temperatureMax">Max temp.:</string>
+    <string name="temperatureMin">Min temp.:</string>
+    <string name="wind">Wind:</string>
+    <string name="rain">Rain:</string>
+    <string name="remaining">306115200000</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

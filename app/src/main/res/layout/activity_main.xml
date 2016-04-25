@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="genbob.de.surveather.MainActivity"
+    android:background="@mipmap/background_killerapp">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textfield_city"
+        android:enabled="true"
+        android:maxLines="1"
+        android:hint="@string/city_enter_city"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_scan"
+        android:id="@+id/button_gps"
+        android:onClick="getPos"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/imageButton_weather"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_go"
+        android:id="@+id/button_select_city"
+        android:onClick="onButtonGoClick"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignBottom="@+id/textfield_city"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <ImageButton
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:id="@+id/imageButton_weather"
+        android:background="@mipmap/goodweather"
+        android:layout_below="@+id/textfield_city"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickWeather" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton_Air"
+        android:background="@mipmap/goodair"
+        android:layout_below="@+id/textView_rain"
+        android:layout_alignEnd="@+id/imageButton_weather"
+        android:onClick="onClickAir"
+        android:nestedScrollingEnabled="false" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton_eye"
+        android:background="@mipmap/goodeye"
+        android:layout_below="@+id/imageButton_Air"
+        android:layout_alignStart="@+id/imageButton_Air"
+        android:onClick="onClickEye" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton_ear"
+        android:background="@mipmap/goodear"
+        android:layout_below="@+id/imageButton_weather"
+        android:layout_alignEnd="@+id/imageView_faces"
+        android:onClick="onClickEar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/temperatur"
+        android:id="@+id/textView_temperatur"
+        android:layout_below="@+id/textfield_city"
+        android:layout_toEndOf="@+id/imageButton_weather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/temperatureMax"
+        android:id="@+id/textView_minTmp"
+        android:layout_below="@+id/textView_temperatur"
+        android:layout_toEndOf="@+id/imageButton_weather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/temperatureMin"
+        android:id="@+id/textView_maxTmp"
+        android:layout_below="@+id/textView_minTmp"
+        android:layout_toEndOf="@+id/imageButton_weather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/wind"
+        android:id="@+id/textView_windSpeed"
+        android:layout_below="@+id/textView_maxTmp"
+        android:layout_toEndOf="@+id/imageButton_weather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/rain"
+        android:id="@+id/textView_rain"
+        android:layout_below="@+id/textView_windSpeed"
+        android:layout_toEndOf="@+id/imageButton_weather" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView_inTemp"
+        android:layout_below="@+id/textfield_city"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textfield_city"
+        android:layout_alignStart="@+id/imageButton_ear"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView_inTempMax"
+        android:layout_below="@+id/textView_inTemp"
+        android:layout_alignEnd="@+id/textView_inTemp"
+        android:layout_toEndOf="@+id/textfield_city"
+        android:layout_alignStart="@+id/imageButton_ear"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView_inTempMin"
+        android:layout_below="@+id/textView_minTmp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textfield_city"
+        android:layout_alignStart="@+id/imageButton_ear"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView_inWind"
+        android:layout_alignTop="@+id/textView_windSpeed"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textfield_city"
+        android:layout_alignStart="@+id/imageButton_ear"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView_inRain"
+        android:layout_below="@+id/textView_inWind"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textfield_city"
+        android:layout_alignStart="@+id/imageButton_ear"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton"
+        android:background="@mipmap/mapicon"
+        android:onClick="onClickMap"
+        android:layout_below="@+id/imageButton_ear"
+        android:layout_alignStart="@+id/imageButton_ear" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:id="@+id/imageView_faces"
+        android:background="@mipmap/faces"
+        android:layout_below="@+id/imageButton_eye"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView_faces"
+        android:layout_alignParentEnd="true"
+        android:progressBackgroundTint="#be1212"
+        android:max="6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How are you?"
+        android:id="@+id/button_hay"
+        android:onClick="inClickHAY"
+        android:nestedScrollingEnabled="false"
+        android:layout_below="@+id/imageButton_Air"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView_countdown"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/progressBar"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/progressBar"
+        android:textColor="#dc1616"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:inputType="date"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>
