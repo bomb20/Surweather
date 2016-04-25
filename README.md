@@ -4,9 +4,9 @@ The Surveather Project started as part of the NASA Spaceapp Challange 2016 in W�
 and is initialized by Sabrina Höhn, Robert Leppich and Vincent Truchseß.
 
 
-# The Surveather Application #
+## The Surveather Application ##
 
-## What is it? ##
+### What is it? ###
 
 The Surveather App is a extended weather-app that shows not only plain weather data but also environmental data, such as air pollution, noise pollution and local allergens.
 This shall be made possible by collaborative data-gathering done by the users.
@@ -14,12 +14,12 @@ This shall be made possible by collaborative data-gathering done by the users.
 At the Moment the application is in an early prototype-state but we look forward to continue the project. 
 
 
-## What is the idea? ##
+### What is the idea? ###
 
 We hope to make a contribution to a more environment-aware society by giving the users the possibility state the conditions of his local area and give information that does not exist in the ordinary weather forecast.
 
 
-## The features will be: ##
+### The features will be: ###
 
 * Overview Screen with weather data and pollution state of your current location
 * Map view with overlays to show zones with high air or noise pollution and local seasonal allergens(e.g. pollen).
